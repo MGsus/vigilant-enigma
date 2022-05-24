@@ -1,0 +1,25 @@
+<ibm-modal [size]="size" [open]="open" (overlaySelected)="closeModal()">
+  <ibm-modal-header
+    (closeSelect)="closeModal()"
+    [showCloseButton]="showCloseButton"
+  >
+    <h2 ibmModalHeaderLabel>Label</h2>
+    <h3 ibmModalHeaderHeading>Modal</h3>
+  </ibm-modal-header>
+  <section ibmModalContent>
+    <h1>Sample modal works.</h1>
+    <p ibmModalContentText>{{ modalText }}</p>
+  </section>
+  <ibm-modal-footer>
+    <button class="bx--btn bx--btn--secondary" (click)="showSecondaryModal()">
+      Show secondary modal
+    </button>
+    <button
+      class="bx--btn bx--btn--primary"
+      modal-primary-focus
+      (click)="closeModal()"
+    >
+      Close
+    </button>
+  </ibm-modal-footer>
+</ibm-modal>
